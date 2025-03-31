@@ -68,7 +68,7 @@
     min-width: 254px;
 }
 .button-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 .header .nav-link {
     font-family: "Mulish", sans-serif;
@@ -83,7 +83,9 @@
     text-decoration: underline;
     color: #555a65;
 }
-
+.header__logo2-img {
+    display: none;
+}
 
 
 
@@ -143,7 +145,7 @@
     background: url("../img/star6.svg") right top no-repeat;
     background-size: contain;
     z-index: 1;
-    animation: floatAndRotate 3s ease-in-out infinite;
+    animation: floatAndRotate 6s ease-in-out infinite;
 }
 
 .star_bg::after {
@@ -156,7 +158,7 @@
     background: url("../img/star6.svg") right top no-repeat;
     background-size: contain;
     z-index: 1;
-    animation: floatAndRotate 3s ease-in-out infinite;
+    animation: floatAndRotate 6s ease-in-out infinite;
 }
 .star_bg::before {
     content: "";
@@ -168,7 +170,7 @@
     background: url("../img/star6.svg") right top no-repeat;
     background-size: contain;
     z-index: 1;
-    animation: floatAndRotate 5s ease-in-out infinite;
+    animation: floatAndRotate 7s ease-in-out infinite;
 }
 
 @keyframes floatAndRotate {
@@ -244,11 +246,23 @@
         transform-origin: 0px 13px;
     }
     .header.active .navbar-brand {
-        margin: 0 auto 74px;
+        margin: 0 auto 0px;
         padding-left: 50px !important;
 
+
+    }
+    .header.active .header__logo1-img {
+        display: none;
+    }
+    .header.active .header__logo2-img {
+        display: block;
+        margin-top: 78px;
+        min-width: 190px;
     }
 
+    .navbar-collapse {
+        margin-top: 74px;
+    }
 
     .hero__text-block {
         order:2;
