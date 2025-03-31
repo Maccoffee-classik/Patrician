@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrician</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<header class="header pt-3 pb-3 ">
+    <nav class=" p-0 navbar navbar-expand-lg navbar-dark ">
+        <div class="container  justify-content-lg-between  ">
+            <a class="navbar-brand " href="#">
+                <img src="img/logo.svg" alt="Patrician_logo" class="header__logo-img">
+
+            </a>
+            <button class="navbar-toggler header__burger-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 17 16" >
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)" d="M-0.000,-0.000 L17.000,-0.000 L17.000,2.000 L-0.000,2.000 L-0.000,-0.000 Z" />
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)" d="M-0.000,7.000 L17.000,7.000 L17.000,9.000 L-0.000,9.000 L-0.000,7.000 Z"/>
+                    <path fill-rule="evenodd"  fill="rgb(0, 0, 0)" d="M-0.000,14.000 L17.000,14.000 L17.000,16.000 L-0.000,16.000 L-0.000,14.000 Z"/>
+                </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex  m-auto  ">
+                    <li class="nav-item "><a class="nav-link p-0 " href="subscribe.html">О Patrician</a></li>
+                    <li class="nav-item "><a class="nav-link p-0 " href="about1.html">Наша миссия</a></li>
+                    <li class="nav-item "><a class="nav-link p-0" href="#">Плюсы приложения</a></li>
+                    <li class="nav-item "><a class="nav-link p-0" href="faq.html">Для кого</a></li>
+                    <li class="nav-item "><a class="nav-link p-0" href="faq.html">Часто задаваемые вопросы</a></li>
+                    <li class="nav-item "><a class="nav-link p-0" href="faq.html">Обратная связь</a></li>
+
+
+
+                </ul>
+                <div class="header__buttons   d-flex">
+                    <button class="button  button-img d-flex d-lg-none " type="button">
+                        <img class="header__button-img" src="img/app_store_badge_ru.svg" alt="app_store_ico">
+                    </button>
+                    <div class="header__button-group d-flex">
+                        <button class="button  button-img  " type="button">
+                            <img src="img/telegram_ico.svg" alt="telegram_ico">
+                        </button>
+                        <button class="button  button-img  " type="button">
+                            <img src="img/mail_ico.svg" alt="mail_ico">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="hero position-relative ">
+    <div class="container star_bg ">
+        <div class="star_bg-center"></div>
+        <div class=" row d-flex justify-content-between align-items-center ">
+            <div class="col-lg-6 hero__text-block ">
+                <h2 class="hero__title">
+                    Patrician - Статус твоего здоровья
+                </h2>
+                <p class="hero__subtitle">Cоциальное приложение для поддержания здоровья, повышения общественной гигиены</p>
+                 <button class="button button-img hero__button  " type="button">
+                     <img class="hero__button-img" src="img/app_store_badge_ru.svg" alt="app_store_ico">
+                 </button>
+            </div>
+            <div class="col-lg-6 hero__img-block d-flex justify-content-center justify-content-lg-end">
+                <img src="img/mobile_img.png" class="hero__img" alt="about1_img">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script> document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header");
+    const navbarNav = document.getElementById("navbarNav");
+
+    navbarNav.addEventListener("show.bs.collapse", function () {
+        header.classList.add("active");
+    });
+
+    navbarNav.addEventListener("hide.bs.collapse", function () {
+        header.classList.remove("active");
+    });
+});
+</script>
+</body>
+
+</html>
