@@ -181,6 +181,157 @@
         transform: translateY(-20px) rotate(180deg);
     }
 }
+/*our-team*/
+.our-team {
+    padding-bottom: 160px;
+}
+.our-team__title {
+    font-family: "Mulish", sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 100%;
+    text-align: center;
+    color: #2b2d33;
+    margin: 0 auto 60px;
+
+}
+.our-team__item {
+    box-shadow: 10px 40px 50px 0 rgba(229, 233, 246, 0.4);
+    background: #fff;
+    padding: 32px;
+    border-radius: 20px;
+    min-height: 386px;
+}
+.our-team__item-title {
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 133%;
+    color: #2b2d33;
+}
+.our-team__item-text {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #555a65;
+    margin-top: 16px;
+}
+
+.our-team::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    width: 100%;
+    height: 617px;
+    z-index: -1;
+    background: url("../img/our-team_bg.png") calc(50% - 54%) center no-repeat;
+}
+
+/*about-app*/
+
+.about-app {
+    padding-top: 110px;
+    overflow: hidden;
+}
+.about-app__second-card {
+    margin-top: -120px!important;
+}
+.about-app__title1 {
+    font-family: "Mulish", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 133%;
+    text-align: center;
+    color: #2b2d33;
+    margin-bottom: 32px;
+}
+.about-app__title2 {
+    font-family: "Mulish", sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 100%;
+    text-align: center;
+    color: #2b2d33;
+}
+.about-app__item-title {
+    font-family: "Mulish", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 120%;
+    color: #2b2d33;
+    margin-top: 39px;
+}
+.about-app__item-text {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #555a65;
+    margin-top: 16px;
+}
+
+.about-app::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 21%;
+    width: 100%;
+    height: 646px;
+    z-index: -1;
+    background: url("../img/about_bg1.png") center center no-repeat;
+}
+.about-app .container::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 44px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../img/about_bg2.png") bottom right no-repeat;
+}
+.about_bg_mob1::before{
+
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-200px);
+    z-index: -1;
+    background: url("../img/about_bg_mob1.png") top left  no-repeat;
+}
+.about_bg_mob2::before {
+    display: none;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    transform: translateX(110px); /* сдвиг на 110px вправо от центра */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../img/about_bg_mob2.png") top right no-repeat;
+    background-size: contain; /* если нужно */
+}
+.about_bg_mob3::before{
+    display: none;
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-200px);
+
+    z-index: -1;
+    background: url("../img/about_bg_mob3.png") top left  no-repeat;
+}
+
 
 
 @media (max-width: 992px) {
@@ -309,6 +460,128 @@
     .star_bg-center::after {
         left: 30px;
     }
+
+
+    /*our-team*/
+    .our-team {
+
+        background: #f7f8fa;
+        border-radius: 12px;
+        padding: 24px 15px 32px;
+        margin: 19px;
+
+    }
+    .our-team__title {
+
+        font-size: 24px;
+        margin: 0 auto 24px;
+
+    }
+    .our-team__item {
+
+        padding: 24px;
+
+        min-height: auto;
+        margin-bottom: 24px;
+    }
+    .our-team__item-title {
+        font-size: 17px;
+    }
+    .our-team__item-text {
+
+        font-size: 16px;
+    }
+    .card-group__item-image {
+        display: flex;
+        align-items: center;
+    }
+    .our-team__image {
+        width: 48px;
+        margin-right: 8px;
+    }
+
+    .our-team::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 60px;
+        width: 100%;
+        height: 617px;
+        z-index: -1;
+        background: url("../img/our-team_bg.png") calc(50% - 54%) center no-repeat;
+    }
+
+
+    /*about-app*/
+    .about-app::before {
+        display: none;
+        content: "";
+        position: absolute;
+        left: -25px;
+        top: 12%;
+        width: 100%;
+        height: 646px;
+        z-index: -1;
+        background: url("../img/about_bg1.png") center center no-repeat;
+    }
+    .about-app .container::after {
+        display: none;
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 44px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: url("../img/about_bg2.png") bottom right no-repeat;
+    }
+    .about-app__item-title {
+        width: 80%;
+        margin: 16px auto 0;
+        text-align: center;
+        font-size: 16px;
+        line-height: 150%;
+
+    }
+    .about-app__item-text {
+        border-left: 2px solid #ff00a8;
+        padding: 0px 0px 0px 16px;
+    }
+    .about-app__second-card {
+        margin-top: 40px!important;
+    }
+    .about-app__image {
+        max-width: 250px;
+    }
+    .about-app__image2 {
+        max-width: 200px;
+    }
+    .about-app .row {
+        position: relative;
+    }
+    .about_bg_mob1,
+    .about_bg_mob2,
+    .about_bg_mob3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .about_bg_mob1::before,
+    .about_bg_mob2::before,
+    .about_bg_mob3::before {
+        display: block;
+    }
+    .about-app .container {
+        overflow: visible;
+        position: relative; /* важно для абсолютного позиционирования детей */
+    }
+    .about-app__item{
+        padding: 0 23px 0;
+    }
+
 
 }
 
