@@ -173,6 +173,96 @@
     </div>
 </section>
 
+<section class="section-faq">
+
+    <div class="container  d-flex flex-column">
+
+        <div class="row d-flex justify-content-center align-items-center order-1 order-lg-1">
+            <div class="col-lg-6">
+                <h2 class="section-faq__title ">Часто задаваемые вопросы</h2>
+                <p class="section-faq__subtitle">Если вы не нашли ответ на интересующий вас вопрос, сообщите нам об этом в электронном письме.</p>
+            </div>
+
+        </div>
+        <div class="row d-flex justify-content-center align-items-center order-3 order-lg-1">
+            <div class="col-lg-4">
+                 <button class="button section-faq__button1">Популярные вопросы</button>
+            </div>
+            <div class="col-lg-4 text-center">
+                <button class="button section-faq__button2">Ещё вопросы</button>
+            </div>
+
+        </div>
+        <div class="row justify-content-center order-2 order-lg-3">
+            <div class="col-lg-8 ">
+
+
+        <div class="faq-content">
+            <ul class="faq-content-ul">
+                <li class="faq-content-li">
+                    <div class="faq-title">
+                        <p>Заголовок  в одну строчку</p>
+                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.51953L7 7.51953L13 1.51953" stroke="#999EAD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="faq-content-text">
+                        Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на лендинге или которую стоит уточнить. Помогите пользователю решить его проблему и снять нагрузку с центра поддержки
+
+                    </div>
+                </li>
+                <li class="faq-content-li">
+                    <div class="faq-title">
+                        <p>Заголовок  в одну строчку</p>
+                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.51953L7 7.51953L13 1.51953" stroke="#999EAD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="faq-content-text">
+                        Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на лендинге или которую стоит уточнить. Помогите пользователю решить его проблему и снять нагрузку с центра поддержки
+                    </div>
+                </li>
+                <li class="faq-content-li">
+                    <div class="faq-title">
+                        <p>Заголовок  в одну строчку</p>
+                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.51953L7 7.51953L13 1.51953" stroke="#999EAD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="faq-content-text">
+                        Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на лендинге или которую стоит уточнить. Помогите пользователю решить его проблему и снять нагрузку с центра поддержки
+                    </div>
+                </li>
+                <li class="faq-content-li">
+                    <div class="faq-title">
+                        <p>Заголовок  в одну строчку</p>
+                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.51953L7 7.51953L13 1.51953" stroke="#999EAD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="faq-content-text">
+                        Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на лендинге или которую стоит уточнить. Помогите пользователю решить его проблему и снять нагрузку с центра поддержки
+                    </div>
+                </li>
+                <li class="faq-content-li">
+                    <div class="faq-title">
+                        <p>Заголовок  в одну строчку</p>
+                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1.51953L7 7.51953L13 1.51953" stroke="#999EAD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="faq-content-text">
+                        Описание – краткая расшифровка часто задаваемого вопроса. Описывайте информацию, на которую не нашлось ответа на лендинге или которую стоит уточнить. Помогите пользователю решить его проблему и снять нагрузку с центра поддержки
+                    </div>
+                </li>
+            </ul>
+        </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script> document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector("header");
@@ -186,6 +276,53 @@
         header.classList.remove("active");
     });
 });
+
+function initFaqTitle() {
+    document.querySelectorAll('.faq-title').forEach(title => {
+        title.removeEventListener('click', faqClickHandler); // Убираем старые обработчики
+        title.addEventListener('click', faqClickHandler); // Добавляем новый обработчик
+    });
+}
+
+function faqClickHandler(event) {
+    event.preventDefault();
+
+    const currentTitle = event.currentTarget;
+    const currentText = currentTitle.nextElementSibling;
+    const currentItem = currentTitle.closest('.faq-content-li');
+
+    // Скрываем все `.faq-content-text`, кроме текущего, с анимацией
+    document.querySelectorAll('.faq-content-text').forEach(text => {
+        if (text !== currentText) {
+            text.style.maxHeight = null;
+            text.style.opacity = '0';
+            setTimeout(() => text.style.display = 'none', 300); // Даем время на анимацию
+        }
+    });
+
+    // Убираем класс 'active' у всех `.faq-content-li`, кроме текущего
+    document.querySelectorAll('.faq-content-li').forEach(item => {
+        if (item !== currentItem) item.classList.remove('active');
+    });
+
+    if (currentText.style.maxHeight && currentText.style.maxHeight !== '0px') {
+        currentText.style.maxHeight = null;
+        currentText.style.opacity = '0';
+        setTimeout(() => (currentText.style.display = 'none'), 300);
+        currentItem.classList.remove('active');
+    } else {
+        currentText.style.display = 'block';
+        setTimeout(() => {
+            currentText.style.maxHeight = currentText.scrollHeight + 'px';
+            currentText.style.opacity = '1';
+        }, 10);
+        currentItem.classList.add('active');
+    }
+}
+
+initFaqTitle();
+
+
 </script>
 </body>
 
