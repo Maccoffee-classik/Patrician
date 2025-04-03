@@ -222,14 +222,14 @@
     content: "";
     position: absolute;
     top: 60px;
-    left: 0;
+    left: -24%;
     width: 100%;
 
     transform: translateX(-31px);
     width: 100%;
     height: 617px;
     z-index: -1;
-    background: url("../img/our-team_bg.png") left center no-repeat;
+    background: url("../img/our-team_bg.png") center center no-repeat;
 }
 
 /*about-app*/
@@ -619,8 +619,158 @@
     text-align: center;
     color: #555a65;
 }
+/*Slider*/
+.card-slider {
+    background: #f7f8fa;
+    padding-top: 75px;
+    padding-bottom: 89px;
+
+}
+.card-slider__title {
+    font-family: "Mulish", sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 100%;
+    text-align: center;
+    color: #2b2d33;
 
 
+}
+.card-slider__subtitle::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: url("../img/quotes.svg") top left  no-repeat;
+
+}
+.card-slider__subtitle {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 133%;
+    color: #2b2d33;
+    margin-top: 55px;
+    margin-bottom: 80px;
+    padding-left: 90px;
+
+    position: relative;
+
+}
+.card-slider__item {
+
+
+}
+.card-slider__item-wrapper {
+    box-shadow: 0 2px 8px 0 rgba(71, 74, 89, 0.08), 0 2px 2px 0 rgba(71, 74, 89, 0.02);
+    background: #fff;
+    min-height: 264px;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+
+}
+.card-slider__image {
+    border-radius: 50px;
+    width: 60px !important;
+    height: 60px;
+}
+.card-slider__custom-testimonials {
+    margin-left: 16px;
+}
+.custom-testimonials__name {
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 156%;
+    color: #2b2d33;
+}
+.custom-testimonials__position {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #999ead;
+}
+.card-slider__item-text {
+    margin-top: 24px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #555a65;
+}
+.card-slider__item-image::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: url("../img/crown.svg") top left  no-repeat;
+
+}
+
+.card-slider__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 52px;
+    margin-left: 52px;
+}
+.card-slider__item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card-slider__item-link:hover {
+    text-decoration: underline;
+}
+
+
+
+.owl-nav {
+    position: absolute;
+    display: flex !important;
+    bottom: 48% !important;
+    width: calc(100% + 52px);
+    justify-content: flex-start;
+    gap: 97%;
+    left: -25px;
+    z-index: 2;
+
+}
+
+.owl-prev span, .owl-next span {
+    color: transparent;
+}
+.owl-dots {
+    height: 0
+}
+
+.owl-prev, .owl-next {
+    content: none;
+    z-index: 3;
+    width: 32px;
+    height: 32px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+}
+
+.owl-prev {
+
+    background-image: url("../img/arrow-prev.svg") !important;
+}
+.owl-next {
+
+    background-image: url("../img/arrow-next.svg") !important;
+}
 
 
 
@@ -740,10 +890,13 @@
     .hero__img {
         width: 65%;
     }
+    .hero__button {
+        display: none;
+    }
 
     .hero {
         padding-top: 44px;
-        padding-bottom: 58px;
+        padding-bottom: 38px;
 
 
     }
@@ -758,7 +911,7 @@
         background: #f7f8fa;
         border-radius: 12px;
         padding: 24px 15px 32px;
-        margin: 19px;
+        margin: 0 19px;
 
     }
     .our-team__title {
@@ -791,6 +944,7 @@
     }
 
     .our-team::before {
+        display: none;
         content: "";
         position: absolute;
         left: 0px;
@@ -997,6 +1151,49 @@
         margin-bottom: 55px;
     }
 
+/*slider*/
+    .card-slider {
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+    .card-slider__title{
+        font-size: 24px;
+
+
+    }
+    .card-slider__subtitle {
+        font-size: 16px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding-left: 48px;
+        padding-right: 10px;
+    }
+
+    .card-slider__subtitle::before {
+
+        background: url("../img/quotes_mob.svg") top left  no-repeat;
+
+    }
+
+    .owl-nav {
+        display: none!important;
+    }
+    . card-slider__item {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .card-slider__item-wrapper {
+        padding: 24px;
+    }
+    .card-slider__list {
+
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .custom-testimonials__name {
+        font-size: 16px;
+    }
 
 }
 
