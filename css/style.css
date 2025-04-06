@@ -45,6 +45,13 @@
 
 
 }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
 .button {
     cursor: pointer;
 }
@@ -58,18 +65,70 @@
 .header__button-group {
     gap: 7px;
 }
+
+
+
 .button-img {
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.svg-wrapper {
+    position: relative;
+    width: 40px;
+    height: 41px;
+}
+
+.svg-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: fill 0.3s;
+}
+
+.svg-top {
+    position: absolute;
+    top: 11px;  /* Подстрой при необходимости */
+    left: 7px;
+    z-index: 2;
+    pointer-events: none;
+    transition: fill 0.3s;
+}
+.svg-top2 {
+    position: absolute;
+    top: 11px;  /* Подстрой при необходимости */
+    left:10px;
+    z-index: 2;
+    pointer-events: none;
+    transition: fill 0.3s;
+
+}
+
+/* Hover эффект — меняем фон у rect */
+.button-img:hover .svg-bg {
+    fill: #2400ff;
+}
+
+
+
+
+.header__button-img {
+
+}
+.button-img {
+    padding: 4px;
     border: none;
     background: transparent;
-    padding: 0;
-    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
-.header__button-img {
-    min-width: 254px;
+
+.button-img:hover .svg-bg {
+    fill: #2400ff; /* Заменяем цвет заливки rect */
 }
-.button-img:hover {
-    transform: scale(1.02);
-}
+
 .header .nav-link {
     font-family: "Mulish", sans-serif;
     font-weight: 400;
@@ -86,12 +145,16 @@
 .header__logo2-img {
     display: none;
 }
+.navbar-nav {
+    margin: 0 auto;
+}
+
 
 
 
 /*hero*/
 .hero {
-    padding-top: 94px;
+    padding-top: 184px;
     padding-bottom: 138px;
 
 
@@ -117,11 +180,60 @@
     min-width: 180px;
 }
 
+
+
+
+.appstore-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.appstore-button:hover {
+    background-color: #2400ff;
+}
+
+.apple-icon {
+    margin-right: 12px;
+    width: 28px;
+    height: 35px;
+    flex-shrink: 0;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.text .small {
+    font-family: "Mulish", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 143%;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.text .big {
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 77%;
+    color: #fff;
+}
+
 .hero::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 94px;
+    top: 184px;
     width: 100%;
     height: 644px;
     background: url("../img/hero_bg.png") calc(50% + 374px) center no-repeat;
@@ -369,7 +481,7 @@
     line-height: 143%;
     text-align: center;
     color: #f7f8fa;
-    transition: transform 0.2s ease-in-out;
+
 
 }
 .section-faq__button2 {
@@ -386,14 +498,18 @@
     line-height: 143%;
     text-align: center;
     color: #2400ff;
-    transition: transform 0.2s ease-in-out;
+
 
 }
 
 
-.section-faq__button1:hover,
+.section-faq__button1:hover{
+    background: transparent;
+    color: #2400ff;
+}
 .section-faq__button2:hover {
-    transform: scale(1.02);
+    background: #2400ff;
+    color: #f7f8fa;
 }
 
 
@@ -421,10 +537,13 @@
 
 .faq-content-li .faq-content-text,
 .faq-content-li .footer-submenu-ul {
-    max-height: 0;
+
     overflow: hidden;
     opacity: 0;
-    transition: max-height 1s ease-in-out, opacity 0.6s ease-in-out;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 0.9s ease, opacity 0.9s ease;
+
 }
 .faq-content-li:not(.active) .faq-content-text, .faq-content-li:not(.active) .footer-submenu-ul {
     max-height: 0;
@@ -432,10 +551,11 @@
 }
 .faq-content-li:not(.active) .faq-content-text {
     padding-top: 0;
+    height: 0;
 }
 .faq-content-li.active .faq-content-text,
 .faq-content-li.active .footer-submenu-ul {
-    max-height: 500px;
+    transform: scaleY(1);
     opacity: 1;
 }
 .faq-content-li.active .faq-title {
@@ -543,7 +663,7 @@
     background: #38b9fc;
     padding: 12px 38px 20px 19px;
     border: none;
-    transition: transform 0.2s ease-in-out;
+
 
 }
 .insert__button svg {
@@ -551,7 +671,8 @@
 }
 
 .insert__button:hover {
-    transform: scale(1.02);
+    color:  #38b9fc;
+    background: #f7f8fa;
 }
 .insert__wrapper {
     border-radius: 24px;
@@ -620,6 +741,10 @@
     color: #555a65;
 }
 /*Slider*/
+.owl-stage {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .card-slider {
     background: #f7f8fa;
     padding-top: 75px;
@@ -773,8 +898,71 @@
 }
 
 
+#scrollTopBtn {
+    position: fixed;
+    bottom: 46px;
+    right: 46px;
+    z-index: 999;
+    background-color: #2400ff; /* Фиолетовый */
+    border: none;
+    border-radius: 12px; /* Радиус скругления */
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
+#scrollTopBtn svg {
+    width: 32px;
+    height: 32px;
+    stroke: white;
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+@media (min-width: 1440px) {
+    .our-team::before {
+        content: "";
+        position: absolute;
+        top: 60px;
+        left:0;
+        width: 100%;
+
+        transform: translateX(-408px);
+        width: 100%;
+        height: 617px;
+        z-index: -1;
+        background: url("../img/our-team_bg.png") center center no-repeat;
+    }
+}
+@media (min-width: 1440px) {
+    #scrollTopBtn {
+        right: calc((100vw - 1200px) / 2 - 40px);
+    }
+
+
+}
+@media (max-width: 1220px) {
+    .navbar-nav {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .header .nav-link {
+        font-size: 13px;
+        margin-right: 8px;
+
+    }
+}
 @media (max-width: 992px) {
+    .navbar-nav {margin: auto}
     .header .nav-link {
 
         font-size: 20px;
@@ -845,6 +1033,16 @@
     .header.active .header__logo1-img {
         display: none;
     }
+
+    .header__logo1-img {
+        display: none;
+    }
+
+    .header__logo2-img {
+        display: block;
+
+        min-width: 190px;
+    }
     .header.active .header__logo2-img {
         display: block;
         margin-top: 78px;
@@ -852,7 +1050,7 @@
     }
 
     .navbar-collapse {
-        margin-top: 74px;
+        margin-top: 34px;
     }
 
     .hero__text-block {
@@ -879,7 +1077,7 @@
         content: "";
         position: absolute;
         left: 0;
-        top: 44px;
+        top: 126px;
         width: 100%;
         height: 100%;
         background: url("../img/hero_bg.png") center top no-repeat;
@@ -890,12 +1088,12 @@
     .hero__img {
         width: 65%;
     }
-    .hero__button {
+    .appstore-button {
         display: none;
     }
 
     .hero {
-        padding-top: 44px;
+        padding-top: 126px;
         padding-bottom: 38px;
 
 
@@ -903,6 +1101,8 @@
     .star_bg-center::after {
         left: 30px;
     }
+
+
 
 
     /*our-team*/
@@ -998,7 +1198,7 @@
         max-width: 250px;
     }
     .about-app__image2 {
-        max-width: 200px;
+        max-width: 250px;
     }
     .about-app .row {
         position: relative;
@@ -1145,7 +1345,22 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        z-index: 1000
+        z-index: 1000;
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 14px;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+
+
+
+
+    .button-scroll:hover{
+        background: #2801fd;
     }
     .copy-past {
         margin-bottom: 55px;
@@ -1195,16 +1410,27 @@
         font-size: 16px;
     }
 
+    #scrollTopBtn {
+
+
+        position: absolute;
+        bottom: 40px;
+        right: 0;
+
+    }
+
 }
 
-.header.active path:nth-of-type(1) {
+
+
+.header.active .header__burger-icon path:nth-of-type(1) {
     transform: rotate(45deg);
     transform-origin: -1px 3px;
 }
-.header.active path:nth-of-type(2) {
+.header.active .header__burger-icon  path:nth-of-type(2) {
     display: none;
 }
-.header.active path:nth-of-type(3) {
+.header.active .header__burger-icon path:nth-of-type(3) {
     transform: rotate(-45deg);
     transform-origin: 0px 13px;
 }
