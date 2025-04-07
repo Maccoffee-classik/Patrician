@@ -608,6 +608,38 @@
         header.classList.remove("active");
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 992) { // для мобильных и планшетов
+                const collapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                collapse.hide();
+            }
+        });
+    });
+});
+/*
+
+const button = document.querySelector('.header');
+const initialHeight = window.innerHeight;
+
+window.addEventListener('resize', () => {
+    // фиксируем на начальную высоту
+    if (window.innerHeight < initialHeight) {
+        button.style.top = '20px'; // или другой отступ
+    } else {
+        button.style.top = '20px';
+    }
+});
+*/
+
+
 /*
 function initFaqTitle() {
     document.querySelectorAll('.faq-title').forEach(title => {
