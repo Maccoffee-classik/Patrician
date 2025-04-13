@@ -1017,7 +1017,12 @@ header {
 section {
     scroll-margin-top: 100px; /* подставь высоту своего header */
 }
-
+section.section-faq.section-faq-mobile div#faq {
+    scroll-margin-top: 300px; /* подставь высоту своего header */
+}
+section.section-faq.section-faq-mobile div#callback {
+    scroll-margin-top: 300px; /* подставь высоту своего header */
+}
 
 
 @media (min-width: 1440px) {
@@ -1547,10 +1552,13 @@ section {
     }
 
     .navbar-nav-wrapper-bg .nav-item:hover {
+        text-decoration: none;
         background: #fff;
         box-shadow: 0 5px 20px rgba(0,0,0,.1);
         border-radius: 50px;
     }
+    .navbar-nav-wrapper-bg .nav-item .nav-link:hover {
+        text-decoration: none;}
     .ml-20 {
         margin-left: 0;
     }
